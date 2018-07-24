@@ -28,9 +28,26 @@
               "src/manifest.json"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/linearicons.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/scss/bootstrap.scss",
+              "src/assets/scss/main.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/vendor/jquery-2.2.4.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/vendor/bootstrap.min.js",
+              "src/assets/js/jquery-ui.js",
+              "src/assets/js/easing.min.js",
+              "src/assets/js/hoverIntent.js",
+              "src/assets/js/superfish.min.js",
+              "src/assets/js/jquery.ajaxchimp.min.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/jquery.nice-select.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/main.js"
+            ]
           },
           "configurations": {
             "production": {

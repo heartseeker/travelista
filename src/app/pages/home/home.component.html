@@ -1,0 +1,42 @@
+<!-- Start post-content Area -->
+<section class="post-content-area" [ngClass]="{'single-post-area': url !== '/'}">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-8 posts-list">
+        <!-- content (blog list) -->
+        <app-list-blog [posts]="posts" *ngIf="posts"></app-list-blog>
+        <!-- End content (blog list) -->
+    </div>
+    <!-- Sidebar widgets -->
+    <div class="col-lg-4 sidebar-widgets">
+        <div class="widget-wrap">
+        <!-- Search Widget -->
+        <app-search-widget></app-search-widget>
+        <!-- End Search Widget -->
+
+        <!-- User info widget -->
+        <app-user-info-widget></app-user-info-widget>
+        <!-- End  User info widget -->
+
+        <!-- Popular post widget -->
+        <app-popular-post-widget></app-popular-post-widget>
+        <!-- End Popular post widget -->
+
+        <!-- Post category widget -->
+        <app-post-category-widget></app-post-category-widget>
+        <!-- End Post category widget -->
+        
+        <!-- Newsletter widget  -->
+        <app-newsletter-widget></app-newsletter-widget>
+        <!-- End Newsletter widget  -->
+
+        <!-- Tag cloud widget -->
+        <app-tag-cloud-widget></app-tag-cloud-widget>
+        <!-- End Tag cloud widget -->
+
+        </div><!-- End widget-wrap -->
+    </div><!-- End Sidebar widgets -->
+    </div> <!-- End row-->
+  </div><!-- End container-->
+</section>
+<!-- End post-content Area -->
