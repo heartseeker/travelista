@@ -1,0 +1,11 @@
+router-outlet {
+    display: none;
+}
+
+.route-container {
+    position: relative;
+}
+
+.route-container >* {
+    display: block;
+}

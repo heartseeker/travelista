@@ -126,7 +126,6 @@ $(document).ready(function() {
          */
         var $mobile_nav = $('#mobile-nav');
 
-
         $mobile_nav.find('> ul').attr({
             'class': '',
             'id': ''

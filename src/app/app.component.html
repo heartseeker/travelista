@@ -11,7 +11,9 @@
 <app-top-category-widget *ngIf="url === '/'"></app-top-category-widget>
 
 <!-- Countent -->
-<router-outlet></router-outlet>
+<div class="route-container" [@routeAnimation]="getDepth(myOutlet)">
+    <router-outlet #myOutlet="outlet"></router-outlet>
+</div>
 
 <!-- start footer Area -->		
 <app-footer></app-footer>

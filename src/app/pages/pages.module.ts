@@ -16,6 +16,7 @@ import { CategoryBlogComponent } from './category-blog/category-blog.component';
 export const routes: Routes = [
   {
     path: 'p',
+    data: { depth: 2 },
     children: [
       {
         path: 'about',
@@ -26,6 +27,7 @@ export const routes: Routes = [
   },
   {
     path: 'p',
+    data: { depth: 2 },
     children: [
       {
         path: 'hotels',
@@ -36,6 +38,7 @@ export const routes: Routes = [
   },
   {
     path: 'p',
+    data: { depth: 2 },
     children: [
       {
         path: 'insurance',
@@ -46,6 +49,7 @@ export const routes: Routes = [
   },
   {
     path: 'p',
+    data: { depth: 2 },
     children: [
       {
         path: 'contact',
@@ -56,9 +60,11 @@ export const routes: Routes = [
   },
   {
     path: ':category',
+    data: { depth: 2 },
     children: [
       {
         path: ':slug',
+        data: { depth: 3 },
         component: SingleBlogComponent,
       }
     ],

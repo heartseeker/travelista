@@ -9,4 +9,23 @@
     margin-right: 1rem;
     position: relative;
     top: 4px;
+    display: none;
+
+    /* Portrait and Landscape */
+    @media screen 
+    and (device-width: 320px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        display: inline-block;
+    }
+
+    /* Portrait and Landscape */
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        display: inline-block;
+    }
+
+
 }
