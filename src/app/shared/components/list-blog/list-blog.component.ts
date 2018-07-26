@@ -17,7 +17,6 @@ export class ListBlogComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.detail.emit(false);
   }
 
   async navigate(url, param) {
