@@ -31,6 +31,9 @@
               "src/styles.scss",
               "src/assets/css/linearicons.css",
               "src/assets/css/font-awesome.min.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/nice-select.css",
+              "src/assets/css/animate.min.css",
               "src/assets/scss/bootstrap.scss",
               "src/assets/scss/main.scss"
             ],

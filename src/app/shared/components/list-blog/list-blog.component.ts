@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list-blog',
@@ -8,10 +10,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ListBlogComponent implements OnInit {
 
   @Input('posts') posts;
+  @Output('detail') detail = new EventEmitter<{}>();
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.detail.emit(false);
+  }
+
+  async navigate(url, param) {
+    await this.router.navigate(['/' + url, param]);
+    this.detail.emit(true);
   }
 
 }

@@ -14,19 +14,46 @@
     </div>
   </div>
   <div class="container main-menu">
+    <button type="button" (click)="openMenu()" id="mobile-nav-toggle"><i class="lnr" [ngClass]="menuActive ? 'lnr-cross' : 'lnr-menu'" ></i></button>
     <div class="row align-items-center justify-content-between d-flex">
         <div id="logo">
+          <a *ngIf="router.url !== '/'" href="javascript:void(0)" (click)="back()"><i class="fa fa-arrow-left back-arrow"></i></a>
           <a href="javascript:void(0)" [routerLink]="['/']"><img src="/assets/img/logo.png" alt="" title="" /></a>
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
-            <li><a href="javascript:void(0)" [routerLink]="['/']">Home</a></li>
-            <li><a href="javascript:void(0)" [routerLink]="['/p/about']">About</a></li>
-            <li><a href="javascript:void(0)" [routerLink]="['/p/hotels']">Hotels</a></li>
-            <li><a href="javascript:void(0)" [routerLink]="['/p/insurance']">Insurance</a></li>
-            <li><a href="javascript:void(0)" [routerLink]="['/p/contact']">Contact</a></li>
+            <li><a href="javascript:void(0)" (click)="routerLink('/')">Home</a></li>
+            <li><a href="javascript:void(0)" (click)="routerLink('/p/about')">About</a></li>
+            <li><a href="javascript:void(0)" (click)="routerLink('/p/hotels')">Hotels</a></li>
+            <li><a href="javascript:void(0)" (click)="routerLink('/p/insurance')">Insurance</a></li>
+            <li><a href="javascript:void(0)" (click)="routerLink('/p/contact')">Contact</a></li>
           </ul>
-        </nav><!-- #nav-menu-container -->					      		  
+        </nav><!-- #nav-menu-container -->		
+
+        <nav id="mobile-nav">
+          <ul class="nav-menu" style="touch-action: pan-y;">
+            <li><a href="javascript:void(0)" (click)="routerLink('/')">Home</a></li>
+            <li><a href="javascript:void(0)" (click)="routerLink('/p/about')">About</a></li>
+            <li><a href="javascript:void(0)" (click)="routerLink('/p/hotels')">Hotels</a></li>
+            <li><a href="javascript:void(0)" (click)="routerLink('/p/insurance')">Insurance</a></li>
+            <li><a href="javascript:void(0)" (click)="routerLink('/p/contact')">Contact</a></li>
+          </ul>
+        </nav>	
     </div>
+    <div id="mobile-body-overly" [ngClass]="{'block': menuActive}"></div>
   </div>
+  <!-- end main-menu-->
+
+  <!-- <div class="container main-menu">
+      <nav id="mobile-nav" style="display: block;">
+        <ul class="" style="touch-action: pan-y;" id="">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/p/about">Aboutxxx</a></li>
+          <li><a routerLink="/p/hotels">Hotels</a></li>
+          <li><a routerLink="/p/insurance">Insurance</a></li>
+          <li><a routerLink="/p/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="mobile-body-overly" style="display: block;"></div>
+    </div> -->
 </header><!-- #header -->

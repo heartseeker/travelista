@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { InsuranceComponent } from './insurance/insurance.component';
 import { ContactComponent } from './contact/contact.component';
+import { CategoryBlogComponent } from './category-blog/category-blog.component';
 
 
 export const routes: Routes = [
@@ -83,6 +84,7 @@ export const routes: Routes = [
     HotelsComponent,
     InsuranceComponent,
     ContactComponent,
+    CategoryBlogComponent,
   ]
 })
 export class PagesModule { }

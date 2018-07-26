@@ -3,6 +3,7 @@
 <div class="container">
     <div class="row">
     <div class="col-lg-8 posts-list">
+        <app-list-blog (detail)="isDetail($event)" *ngIf="!isPostDetail && posts" [posts]="posts"></app-list-blog>
         <router-outlet></router-outlet>
     </div>
     <!-- Sidebar widgets -->
@@ -13,7 +14,7 @@
         <!-- End Search Widget -->
 
         <!-- User info widget -->
-        <app-user-info-widget></app-user-info-widget>
+        <!-- <app-user-info-widget></app-user-info-widget> -->
         <!-- End  User info widget -->
 
         <!-- Popular post widget -->

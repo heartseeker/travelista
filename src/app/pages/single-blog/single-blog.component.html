@@ -1,5 +1,4 @@
 <div class="single-post row" *ngIf="post$ | async as post">
-  <!-- <pre>{{ post[0]._embedded['wp:term'] | json }}</pre> -->
     <div class="col-lg-12">
       <div class="feature-img">
         <img class="img-fluid" [src]="post[0]._embedded['wp:featuredmedia']['0'].source_url" alt="">
